@@ -1,0 +1,124 @@
+---
+---
+<section id="features" class="features">
+  <div class="container">
+    <div class="header">
+      <h2>Todo lo que necesitas para tu clínica</h2>
+      <p>Patli centraliza todas las operaciones de tu consultorio en una interfaz intuitiva y potente, diseñada para cubrir cada necesidad de tu práctica veterinaria.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="icon-wrapper">📅</div>
+        <h3>Gestión de citas y agenda</h3>
+        <p>Organiza tu día con facilidad. Sincronización en tiempo real, recordatorios automáticos y vista por médico o sala.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrapper">🐾</div>
+        <h3>Historial clínico de mascotas</h3>
+        <p>Accede rápidamente a la historia completa de cada mascota: vacunas, desparasitaciones, cirugías y notas médicas.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrapper">📦</div>
+        <h3>Control de inventario</h3>
+        <p>Gestiona stock de medicamentos y productos. Alertas de bajo inventario y reportes de caducidad automáticos.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrapper">💳</div>
+        <h3>Facturación / cobros</h3>
+        <p>Cobros rápidos, generación de recibos y control de caja diaria. Todo integrado con los servicios prestados.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrapper">📈</div>
+        <h3>Reportes y estadísticas</h3>
+        <p>Visualiza el rendimiento de tu clínica con métricas clave sobre ventas, citas y crecimiento mensual.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrapper">🏢</div>
+        <h3>Multi-sucursal</h3>
+        <p>Administra varias clínicas desde una sola cuenta, centralizando la información y el stock de todas tus sedes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features {
+    padding: 8rem 2rem;
+    position: relative;
+    background-color: var(--bg);
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .header h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+  .header p {
+    color: var(--text-muted);
+    font-size: 1.125rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  .feature-card {
+    background: var(--card-bg);
+    padding: 3.5rem 2.5rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+  }
+  .feature-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--primary);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    background: rgba(30, 41, 59, 0.8);
+  }
+  .icon-wrapper {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    display: block;
+    filter: drop-shadow(0 0 15px rgba(70, 177, 161, 0.3));
+  }
+  .feature-card h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+  }
+  .feature-card p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin: 0;
+    text-align: left;
+  }
+
+  @media (max-width: 1024px) {
+    .feature-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .feature-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

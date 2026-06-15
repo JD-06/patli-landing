@@ -1,0 +1,185 @@
+---
+---
+<section id="pricing" class="pricing">
+  <div class="container">
+    <div class="header">
+      <h2>Planes a tu medida</h2>
+      <p>Elige el plan que mejor se adapte al tamaño de tu clínica.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Básico</h3>
+        <div class="price">$0<span>/mes</span></div>
+        <p>Para veterinarios independientes.</p>
+        <ul>
+          <li>Hasta 50 pacientes</li>
+          <li>Agenda básica</li>
+          <li>Soporte por email</li>
+        </ul>
+        <a href="#" class="btn">Comenzar gratis</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="badge">Popular</div>
+        <h3>Pro</h3>
+        <div class="price">$29<span>/mes</span></div>
+        <p>Para clínicas en crecimiento.</p>
+        <ul>
+          <li>Pacientes ilimitados</li>
+          <li>Inventario completo</li>
+          <li>Reportes avanzados</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Prueba gratuita</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Clínica</h3>
+        <div class="price">$59<span>/mes</span></div>
+        <p>Para múltiples sucursales.</p>
+        <ul>
+          <li>Todo lo de Pro</li>
+          <li>Multi-sucursal</li>
+          <li>API para integraciones</li>
+          <li>Capacitación personalizada</li>
+        </ul>
+        <a href="#" class="btn">Contactar ventas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing {
+    padding: 10rem 2rem;
+    background-color: #ffffff;
+    position: relative;
+  }
+  /* Curva de entrada (Top) */
+  .pricing::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: #ffffff;
+    clip-path: ellipse(50% 100% at 50% 100%);
+  }
+  /* Curva de salida (Bottom) */
+  .pricing::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: #ffffff;
+    clip-path: ellipse(50% 100% at 50% 0%);
+    z-index: 2;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .header h2 {
+    font-size: 2.5rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+  }
+  .header p {
+    color: #64748b;
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: center;
+  }
+  .pricing-card {
+    background: #f8fafc;
+    padding: 3rem 2rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .pricing-card:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-5px);
+  }
+  .pricing-card.featured {
+    background: #ffffff;
+    border: 2px solid var(--primary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  }
+  .badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 1.5rem 0;
+  }
+  .price span {
+    font-size: 1rem;
+    color: #64748b;
+  }
+  .pricing-card h3 {
+    color: #1e293b;
+    font-size: 1.5rem;
+  }
+  .pricing-card p {
+    color: #475569;
+  }
+  .pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    text-align: left;
+  }
+  .pricing-card ul li {
+    margin-bottom: 0.75rem;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .pricing-card ul li::before {
+    content: "✓";
+    color: var(--primary);
+    font-weight: bold;
+  }
+  .btn {
+    display: block;
+    padding: 0.875rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    color: #1e293b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+  }
+  .btn-primary:hover {
+    filter: brightness(0.9);
+  }
+</style>

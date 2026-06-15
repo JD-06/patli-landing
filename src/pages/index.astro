@@ -1,0 +1,155 @@
+---
+import Hero from '../components/Hero.astro';
+import Problems from '../components/Problems.astro';
+import Features from '../components/Features.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Pricing from '../components/Pricing.astro';
+import FAQ from '../components/FAQ.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Patli | Gestión Veterinaria Inteligente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="/logo.png" alt="Patli Logo" class="logo-img" />
+          <span>Patli</span>
+        </a>
+        <div class="nav-links">
+          <a href="#features">Funciones</a>
+          <a href="#pricing">Planes</a>
+          <a href="#faq">Dudas</a>
+          <a href="#contacto" class="btn-nav">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+		<main>
+      <Hero />
+      <Problems />
+      <Features />
+      <HowItWorks />
+      <Testimonials />
+      <Pricing />
+      <FAQ />
+    </main>
+
+    <Footer />
+	</body>
+</html>
+
+<style is:global>
+  :root {
+    --primary: #46B1A1;
+    --secondary: #3D9688;
+    --text: #f3f4f6;
+    --text-muted: #9ca3af;
+    --bg: #0f172a;
+    --card-bg: #1e293b;
+    --accent: #134e4a;
+    --paw-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30.5 45c4.1 0 7.5-4.5 7.5-10s-3.4-10-7.5-10-7.5 4.5-7.5 10 3.4 10 7.5 10zm19.5-5c4.1 0 7.5-4.5 7.5-10s-3.4-10-7.5-10-7.5 4.5-7.5 10 3.4 10 7.5 10zm20.5 5c4.1 0 7.5-4.5 7.5-10s-3.4-10-7.5-10-7.5 4.5-7.5 10 3.4 10 7.5 10zm-20 15c-11 0-20 8-20 18s9 18 20 18 20-8 20-18-9-18-20-18z' fill='%2346B1A1' fill-opacity='0.03'/%3E%3C/svg%3E");
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background-color: var(--bg);
+    background-image: var(--paw-pattern);
+    line-height: 1.5;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo-img {
+    height: 40px;
+    width: auto;
+    filter: brightness(1.2);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: var(--primary);
+  }
+
+  .btn-nav {
+    background: var(--primary);
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+  }
+
+  main {
+    margin-top: 80px;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  }
+</style>

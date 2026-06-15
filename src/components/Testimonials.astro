@@ -1,0 +1,125 @@
+---
+---
+<section class="testimonials">
+  <div class="container">
+    <h2>Lo que dicen los expertos</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="quote-icon">“</div>
+        <p>Patli ha transformado la manera en que gestionamos las citas. Ya no perdemos tiempo con llamadas interminables y todo fluye mejor.</p>
+        <div class="author">
+          <strong>Dr. Alejandro Ruiz</strong>
+          <span>Clínica San Francisco</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-icon">“</div>
+        <p>El historial clínico digital es sumamente intuitivo. Nos permite tener toda la información de la mascota en segundos frente al dueño.</p>
+        <div class="author">
+          <strong>Dra. María García</strong>
+          <span>Veterinaria El Bosque</span>
+        </div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat-item">
+        <strong>+50</strong>
+        <span>Clínicas</span>
+      </div>
+      <div class="stat-item">
+        <strong>+2,000</strong>
+        <span>Pacientes</span>
+      </div>
+      <div class="stat-item">
+        <strong>99%</strong>
+        <span>Satisfacción</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: 8rem 2rem;
+    background-color: var(--bg);
+    text-align: center;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .testimonials h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 5rem;
+  }
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .testimonial-card {
+    padding: 3rem;
+    background: var(--card-bg);
+    border-radius: 1.5rem;
+    text-align: left;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .quote-icon {
+    font-size: 4rem;
+    color: var(--primary);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: -1rem;
+    font-family: serif;
+  }
+  .testimonial-card p {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    position: relative;
+  }
+  .author strong {
+    display: block;
+    color: white;
+    font-size: 1.1rem;
+  }
+  .author span {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    padding-top: 2rem;
+  }
+  .stat-item strong {
+    display: block;
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  .stat-item span {
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 768px) {
+    .stats {
+      flex-direction: column;
+      gap: 4rem;
+    }
+    .stat-item strong {
+      font-size: 2.5rem;
+    }
+  }
+</style>

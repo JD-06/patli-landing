@@ -1,0 +1,207 @@
+---
+---
+<section id="faq" class="faq">
+  <div class="container">
+    <h2>Dudas comunes</h2>
+    <div class="faq-list" id="faq-list">
+      <!-- Grupo 1: Lo básico -->
+      <details class="faq-item" open>
+        <summary>¿Qué es Patli?</summary>
+        <div class="content">
+          <p>Patli es un programa que te ayuda a organizar tu veterinaria. Ahí guardás las citas de tus clientes, cuánto cobrás, qué productos tenés y el historial de cada mascota. Todo en un solo lugar.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Necesito comprar algo o instalar algo en mi computadora?</summary>
+        <div class="content">
+          <p>No. Solo necesitás una computadora, celular o tablet con internet. No hay que comprar equipos especiales ni instalar nada. Funciona como Facebook o WhatsApp — entrás con tu usuario y contraseña y listo.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Qué puedo hacer con Patli?</summary>
+        <div class="content">
+          <p>Podés hacer casi todo lo que necesitás en tu veterinaria:</p>
+          <ul>
+            <li>Agendar citas de tus clientes</li>
+            <li>Cobrar productos, servicios y consultas</li>
+            <li>Guardar el historial de cada mascota</li>
+            <li>Controlar el stock de productos (medicinas, alimentos)</li>
+            <li>Ver cuánto facturaste cada día, semana o mes</li>
+            <li>Enviar recordatorios de cita automáticamente</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Mis datos están seguros?</summary>
+        <div class="content">
+          <p>Sí. Patli guarda toda tu información protegida en la nube. Es como tener tu información guardada en un banco — está resguardada y nadie ajeno puede acceder.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Puedo probarlo antes de pagarlo?</summary>
+        <div class="content">
+          <p>Sí. Podés hacer una prueba gratuita para ver cómo funciona y decidir si te sirve.</p>
+        </div>
+      </details>
+
+      <!-- Grupo 2: Precios y Proceso -->
+      <details class="faq-item">
+        <summary>¿Cuánto cuesta?</summary>
+        <div class="content">
+          <p>Depende del tamaño de tu veterinaria. Tenemos planes mensuales desde precios accesibles para clínicas pequeñas hasta opciones para redes de clínicas. Contactanos y te damos el precio exacto.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Cómo empiezo a usarlo?</summary>
+        <div class="content">
+          <ol>
+            <li>Nos contactás (por correo o WhatsApp)</li>
+            <li>Creamos tu cuenta con tus datos</li>
+            <li>Te enseñamos a usarlo (una capacitación rápida)</li>
+            <li>Empezás a organizar tu veterinaria el mismo día</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Puedo poner todos los servicios de mi veterinaria?</summary>
+        <div class="content">
+          <p>Sí. Podés agregar todos los servicios que ofrezcas: consultas, vacunas, baños, cirugías, laboratorio, etc. Cada uno con su nombre y precio.</p>
+        </div>
+      </details>
+
+      <!-- Grupo 3: Especialización -->
+      <details class="faq-item">
+        <summary>¿Sirve para estética canina?</summary>
+        <div class="content">
+          <p>Sí. Patli funciona para veterinarias, peluquerías caninas y centros de estética animal. Cargás los servicios que ofrezcas y el sistema los maneja igual.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  // Mostramos las primeras 4 preguntas por defecto
+  faqItems.forEach((item, index) => {
+    if (index > 3) {
+      // @ts-ignore
+      item.style.display = 'none';
+      // @ts-ignore
+      item.style.opacity = '0';
+      // @ts-ignore
+      item.style.transform = 'translateY(10px)';
+    } else {
+      // Aseguramos que las primeras 4 sean visibles
+      // @ts-ignore
+      item.style.display = 'block';
+      // @ts-ignore
+      item.style.opacity = '1';
+      // @ts-ignore
+      item.style.transform = 'translateY(0)';
+    }
+  });
+
+  faqItems.forEach((item, index) => {
+    item.addEventListener('toggle', (event) => {
+      // @ts-ignore
+      if (event.target.open) {
+        // Al abrir una, revelamos la siguiente si está oculta
+        const nextItem = faqItems[index + 1];
+        // @ts-ignore
+        if (nextItem && nextItem.style.display === 'none') {
+          // @ts-ignore
+          nextItem.style.display = 'block';
+          setTimeout(() => {
+            // @ts-ignore
+            nextItem.style.opacity = '1';
+            // @ts-ignore
+            nextItem.style.transform = 'translateY(0)';
+          }, 10);
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  .faq {
+    padding: 10rem 2rem;
+    background-color: #f8fafc;
+    position: relative;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .faq h2 {
+    font-size: 2.5rem;
+    color: #0f172a; /* Azul muy oscuro para máximo contraste */
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  details {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    border: 1px solid #cbd5e1; /* Borde más visible */
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+  }
+  details:hover {
+    border-color: var(--primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  summary {
+    font-weight: 700; /* Más negrita */
+    font-size: 1.125rem;
+    color: #1e293b; /* Texto oscuro y legible */
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+  }
+  summary::after {
+    content: "+";
+    font-size: 1.5rem;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+  }
+  details[open] summary::after {
+    transform: rotate(45deg);
+    content: "+";
+  }
+  .content {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #f1f5f9;
+  }
+  .content p {
+    color: #334155; /* Gris muy oscuro, casi negro, para lectura fácil */
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .content ul, .content ol {
+    padding-left: 1.5rem;
+    color: #334155;
+    font-weight: 500;
+  }
+  .content li {
+    margin-bottom: 0.5rem;
+  }
+</style>
